@@ -1,30 +1,77 @@
 package domain;
 
+
+ /**
+ * Клас художник що розширює клас співробітник
+ */ 
 public class Artist extends Employee {
 
-    public Artist(String[] skiils, String name, String jobTitle, int level, String dept) {
+
+/** 
+ *
+ * Конструктор класу
+ *
+ * @param skiils  the skiils. 
+ * @param name  the name. 
+ * @param jobTitle  the job title. 
+ * @param level  the level. 
+ * @param dept  the dept. 
+ */
+    public Artist(String[] skiils, String name, String jobTitle, int level, String dept) { 
+
         super(name, jobTitle, level, dept);
         this.skiils = skiils;
     }
 
-    public Artist(String[] skiils) {
+
+/** 
+ *
+ * Конструктор класу що приймає масив навичок
+ *
+ * @param skiils  the skiils. 
+ */
+    public Artist(String[] skiils) { 
+
         super();
         this.skiils = skiils;
     }
     
-    public Artist() {
+
+/** 
+ *
+ * Конструктор що створює пустий масив навичок
+ */
+    public Artist() { 
+
         super();
         this.skiils = new String[10];
     }
 
+    
+
+/** 
+ *
+ * Отримати навички у вигляді рядку
+ *
+ * @return повертає навички у вигляді строки
+ */
     @Override
-    public String toString() {
+    public String toString() { 
+
         return super.toString()+"\nSkills: "+getSkills();
     }
 
     private String[] skiils;
 
-    public String getSkills() {
+
+/** 
+ *
+ * Отримати навички
+ *
+ * @return повертає список навичок
+ */
+    public String getSkills() { 
+
         String s = "";
         for (String e : skiils) {
             s = s + e + ", ";
@@ -33,11 +80,28 @@ public class Artist extends Employee {
         return s;
     }
 
-    public void setSkills(String[] skills) {
+
+/** 
+ *
+ * Встановити навички
+ *
+ * @param skills  the skills. 
+ * 
+ */
+    public void setSkills(String[] skills) { 
+
         this.skiils=skills;
     }
 
-    public String[] getSkillsLSist() {
+
+/** 
+ *
+ * Отримати навички
+ *
+ * @return повертає список навичок
+ */
+    public String[] getSkillsLSist() { 
+
         return skiils;
     }
 }

@@ -2,6 +2,9 @@ package test;
 
 import domain.*;
 
+/**
+ * Клас для тестування інших класів
+ */
 public class EmployeesTest {
 
     public static void main(String args[]) {

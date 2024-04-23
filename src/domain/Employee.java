@@ -1,8 +1,21 @@
 package domain;
+
+ /**
+ * The class Employee
+ */ 
 public class Employee {
 
+    
+
+/** 
+ *
+ * Рядок співробітників
+ *
+ * @return інформація про співробітників
+ */
     @Override
-    public String toString() {
+    public String toString() { 
+
         return "\nEmployee ID= " + ID + "\nName= " + name + "\nJobTitle= " + jobTitle + "\nLevel= " + level + "\nDept= " + dept;
     }
 
@@ -14,7 +27,18 @@ public class Employee {
 
    // private static int employeesCount = 0;
 
-    public Employee(String name, String jobTitle, int level, String dept) {
+
+/** 
+ *
+ * Конструктор класу 
+ *
+ * @param name  the name. 
+ * @param jobTitle  the job title. 
+ * @param level  the level. 
+ * @param dept  the dept. 
+ */
+    public Employee(String name, String jobTitle, int level, String dept) { 
+
         this();
         setName(name);
         this.jobTitle = jobTitle;
@@ -30,26 +54,65 @@ public class Employee {
         this.dept = dept;
     }
 
-    public Employee() {
+
+/** 
+ *
+ * Конструктор класу з випадковим ID співробітника
+ *
+ */
+    public Employee() { 
+
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {
 //            throw new NumberFormatException("ERROR! Employee's ID cannot be greater than 10000. Employee is not created!");
 //        }
     }
 
-    public void setJobTitle(String job) {
+
+/** 
+ *
+ * Змінити посаду
+ *
+ * @param job  the job. 
+ */
+    public void setJobTitle(String job) { 
+
         jobTitle = job;
     }
 
-    public String getJobTitle() {
+
+/** 
+ *
+ * Поаертає посаду
+ * 
+ * @return Назва посади
+ */
+    public String getJobTitle() { 
+
         return jobTitle;
     }
 
-    public String getName() {
+
+/** 
+ *
+ * Поаертає ім'я
+ *
+ * @return ім'я робітника
+ */
+    public String getName() { 
+
         return name;
     }
 
-    public void setLevel(int level) {
+
+/** 
+ *
+ * Встановлює рівень якщо він в межах від 1 до 3
+ *
+ * @param level  the level. 
+ */
+    public void setLevel(int level) { 
+
         switch (level) {
             case 1:
             case 2:
@@ -61,19 +124,51 @@ public class Employee {
         }
     }
 
-    public int getLevel() {
+
+/** 
+ *
+ * Поаертає рівень
+ *
+ * @return the level
+ */
+    public int getLevel() { 
+
         return level;
     }
 
-    public String getDept() {
+
+/** 
+ *
+ * Поаертає відділ
+ *
+ * @return назва відділу
+ */
+    public String getDept() { 
+
         return dept;
     }
 
-    public void setDept(String dept) {
+
+/** 
+ *
+ * Встановлює відділ
+ *
+ * @param dept  the dept. 
+ */
+    public void setDept(String dept) { 
+
         this.dept = dept;
     }
 
-    public void setName(String name) {
+
+/** 
+ *
+ * Встановлює ім'я з перевіркою правильності імені
+ *
+ * @param name  the name. 
+ */
+    public void setName(String name) { 
+
 //        boolean correctName = true;
 //        for (int i = 0; i < name.length(); i++) {
 //            char s = name.charAt(i);
